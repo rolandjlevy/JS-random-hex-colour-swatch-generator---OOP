@@ -11,3 +11,5 @@ https://gist.github.com/faisalman/4213592
 
 ### Hex colour information
 - https://www.colorhexa.com
+
+### Colour palette emoji 🎨
