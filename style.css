@@ -12,6 +12,11 @@ body {
   background: #444;
 }
 
+h3 {
+  font-family: 'Merienda One', cursive;
+  font-size: 2rem;
+}
+
 .wrapper {
   height: 100vh;
   width: 100%;
@@ -39,6 +44,21 @@ body {
               0 16px 16px -10px rgba(0,0,0,0.5);
 }
 
+.fa-gradient {
+	background: radial-gradient(circle at 50% 0,
+      rgba(255,0,0,1),
+      rgba(255,0,0,0) 60%),
+    radial-gradient(circle at 6.7% 75%,
+      rgb(255, 230, 0),
+      rgba(0,0,255,0) 60%),
+    radial-gradient(circle at 93.3% 75%,
+      rgb(174, 0, 255),
+      rgba(0,255,0,0) 60%) white;
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
 .block {
   background: #444;
   transform: translateY(0);
@@ -54,7 +74,7 @@ body {
 
 .block + .block-overlay {
   background: #fff;
-  transform: translateY(0) rotate(90deg);
+  transform: translateY(0);
   transition: all 0.5s ease;
   opacity: 0;
   border-radius: var(--border-radius);
@@ -62,7 +82,7 @@ body {
 
 .block:hover + .block-overlay {
   --ypos: calc(var(--block-size)/2 - var(--block-size));
-  transform: translateY(var(--ypos)) rotate(0);
+  transform: translateY(var(--ypos));
   opacity: 1;
   transition: all 0.5s ease;
   pointer-events: none;
@@ -73,6 +93,26 @@ body {
   display: block;
   background: #fff;
   top: var(--block-size);
+}
+
+.hex-value {
+  text-decoration: none;
+}
+
+.hex-value:hover {
+  text-decoration: underline;
+}
+
+.hex-value::after {
+  /* <i class="fas fa-external-link-alt"></i> */
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 900; 
+  content: "\f35d";
+  margin-left: 5px;
+}
+
+.hex-value::after:hover {
+  text-decoration: none;
 }
 
 .fa-info-circle, .fa-palette {
@@ -125,15 +165,17 @@ body {
 .btn {
   font-family: Arial, Helvetica, sans-serif;
   border-radius: 5px;
+  border: none;
+  padding: 3px 6px;
   background-color: #ddd;
   cursor: pointer;
-  transition: background-color 0.2s ease;
-  text-align: left;
+  transition: all 0.2s ease;
 }
 
 .btn:hover {
   background-color: #fff;
-  transition: background-color 0.2s ease;
+  box-shadow: 0 5px 10px -5px #000000;
+  transition: all 0.2s ease;
 }
 
 /**************/
@@ -198,4 +240,8 @@ body {
 
 .m-t-10 {
   margin-top: 10px;
+}
+
+.m-t-15 {
+  margin-top: 15px;
 }

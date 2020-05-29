@@ -19,14 +19,14 @@ const newColour = () => {
 
 const loadSwatch = (colour) => {
   block.style.backgroundColor = `#${colour.hex}`;
-  // hexValue.textContent = `#${colour.hex}`;
+  hexValue.textContent = `#${colour.hex}`;
+  hexValue.href = `https://www.colorhexa.com/${colour.hex}`;
   blockOverlay.innerHTML = `
     <h4 class="m-0 m-b-5">Colour information <i class="fas fa-info-circle"></i></h4> 
     <p class="font-size-14px m-0">
       Hex: #${colour.hex}<br>
       RGB: ${colour.rgb}<br>
       HSL: ${colour.hsl}<br>
-      <!--<a href="https://www.colorhexa.com/${colour.hex}">colorhexa.com</a>-->
     </p>
   `;
 }

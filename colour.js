@@ -30,7 +30,7 @@ function Colour(max) {
     s = delta == 0 ? 0 : delta / (1 - Math.abs(2 * l - 1));
     s = +(s * 100).toFixed(1);
     l = +(l * 100).toFixed(1);
-    return "hsl(" + h + ", " + s + "%, " + l + "%)";
+    return `hsl(${h}°, ${s}%, ${l}%)`;
   }
   this.hex = `${this.dec2hex(this.r)}${this.dec2hex(this.g)}${this.dec2hex(this.b)}`
   this.rgb = `rgb(${this.r}, ${this.g}, ${this.b})`;
