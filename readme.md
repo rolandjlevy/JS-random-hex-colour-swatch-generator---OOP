@@ -7,4 +7,4 @@
 #### Links
 - Live demo: https://js-random-hex-colour-swatch-generator-oop--rjlevy.repl.co/
 - Source code: https://repl.it/@rjlevy/JS-random-hex-colour-swatch-generator-oop
-- Github: https://github.com/rolandjlevy/JS-random-hex-colour-swatch-generator-oop
+- Github: https://github.com/rolandjlevy/js-random-hex-colour-swatch-generator-oop
