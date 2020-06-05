@@ -15,7 +15,7 @@ body {
 
 h3 {
   font-family: 'Merienda One', cursive;
-  font-size: 2rem;
+  font-size: 1.875rem;
 }
 
 .wrapper {
@@ -150,12 +150,12 @@ h3 {
 
 .swatch {
   display: none;
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   margin: 0;
   padding: 0;
   vertical-align: top;
-  border-radius: 2px;
+  border-radius: 3px;
   cursor: pointer;
   z-index: 1;
 }
@@ -187,12 +187,17 @@ h3 {
   background-color: #ddd;
   cursor: pointer;
   transition: all 0.2s ease;
+  outline: 0;
 }
 
 .btn:hover {
   background-color: #fff;
   box-shadow: 0 5px 10px -5px #000000;
   transition: all 0.2s ease;
+}
+
+.btn:active {
+  transform: translateY(1px);
 }
 
 /**************/
@@ -257,6 +262,10 @@ h3 {
 
 .m-b-10 {
   margin-bottom: 10px;
+}
+
+.m-b-20 {
+  margin-bottom: 20px;
 }
 
 .m-t-10 {
