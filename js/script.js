@@ -3,6 +3,7 @@ const blockOverlay = document.querySelector('.block-overlay');
 const block = document.querySelector('.block');
 const button = document.querySelector('.btn');
 const swatch = document.querySelector('.swatch');
+const swatchWrapper = document.querySelector('.swatch-wrapper');
 
 const MAX_HEX = parseInt('ff', 16);
 let swatchCount = 0;
@@ -46,6 +47,10 @@ const addSwatch = (colour) => {
     loadSwatch(colourObject);
   });
   swatch.before(clone);
+  swatchWrapper.scrollTop = swatchWrapper.scrollHeight;
+  if (swatchWrapper.scrollTop > 0) {
+    swatchWrapper.classList.add('overflow-y-scroll');
+  }
 }
 
 const selectSwatch = (e) => {
