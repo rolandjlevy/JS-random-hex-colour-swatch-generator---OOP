@@ -61,6 +61,15 @@ const selectSwatch = (e) => {
   selected = e.target;
 }
 
+const setFullYear = () => {
+  const thisYear = document.querySelector('.this-year');
+  thisYear.innerHTML = (new Date()).getFullYear();
+}
+
 button.addEventListener('click', () => newColour());
 
-newColour();
+
+document.addEventListener('DOMContentLoaded', (e) => {
+  newColour();
+  setFullYear();
+});

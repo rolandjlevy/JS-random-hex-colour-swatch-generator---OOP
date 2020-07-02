@@ -116,15 +116,15 @@ h3 {
   text-decoration: underline;
 }
 
-.hex-value::after {
+.hex-value::after:hover {
+  text-decoration: none;
+}
+
+.new-tab-icon::after {
   font-family: "Font Awesome 5 Free"; 
   font-weight: 900; 
   content: "\f35d";
   margin-left: 5px;
-}
-
-.hex-value::after:hover {
-  text-decoration: none;
 }
 
 .block-overlay > h4 > .fa-info-circle {
