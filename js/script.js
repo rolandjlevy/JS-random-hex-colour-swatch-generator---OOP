@@ -68,7 +68,6 @@ const setFullYear = () => {
 
 button.addEventListener('click', () => newColour());
 
-
 document.addEventListener('DOMContentLoaded', (e) => {
   newColour();
   setFullYear();
