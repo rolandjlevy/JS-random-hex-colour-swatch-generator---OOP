@@ -4,6 +4,7 @@ const block = document.querySelector('.block');
 const button = document.querySelector('.btn');
 const swatch = document.querySelector('.swatch');
 const swatchWrapper = document.querySelector('.swatch-wrapper');
+document.querySelector('.this-year').textContent = new Date().getFullYear();
 
 const MAX_HEX = parseInt('ff', 16);
 let swatchCount = 0;
