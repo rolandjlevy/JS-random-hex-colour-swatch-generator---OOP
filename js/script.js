@@ -1,10 +1,4 @@
-const hexValue = document.querySelector('.hex-value');
-const blockOverlay = document.querySelector('.block-overlay');
-const block = document.querySelector('.block');
-const button = document.querySelector('.btn');
-const swatch = document.querySelector('.swatch');
-const swatchWrapper = document.querySelector('.swatch-wrapper');
-document.querySelector('.this-year').textContent = new Date().getFullYear();
+const $ = (elem) => document.querySelector(elem);
 
 const MAX_HEX = parseInt('ff', 16);
 let swatchCount = 0;
@@ -20,10 +14,10 @@ const newColour = () => {
 }
 
 const loadSwatch = (colour) => {
-  block.style.backgroundColor = `#${colour.hex}`;
-  hexValue.textContent = `#${colour.hex}`;
-  hexValue.href = `https://www.colorhexa.com/${colour.hex}`;
-  blockOverlay.innerHTML = `
+  $('.block').style.backgroundColor = `#${colour.hex}`;
+  $('.hex-value').textContent = `#${colour.hex}`;
+  $('.hex-value').href = `https://www.colorhexa.com/${colour.hex}`;
+  $('.block-overlay').innerHTML = `
     <h4 class="m-0 m-b-5">Colour information <i class="fas fa-info-circle"></i></h4> 
     <p class="font-size-14px m-0">
       Hex: #${colour.hex}<br>
@@ -34,7 +28,7 @@ const loadSwatch = (colour) => {
 }
 
 const addSwatch = (colour) => {
-  const clone = swatch.cloneNode(true);
+  const clone = $('.swatch').cloneNode(true);
   clone.id = String(++swatchCount);
   clone.value = JSON.stringify(colour);
   clone.classList.add('swatch');
@@ -47,10 +41,10 @@ const addSwatch = (colour) => {
     const colourObject = JSON.parse(e.target.value);
     loadSwatch(colourObject);
   });
-  swatch.before(clone);
-  swatchWrapper.scrollTop = swatchWrapper.scrollHeight;
-  if (swatchWrapper.scrollTop > 0) {
-    swatchWrapper.classList.add('overflow-y-scroll');
+  $('.swatch').before(clone);
+  $('.swatchWrapper').scrollTop = $('.swatchWrapper').scrollHeight;
+  if ($('.swatchWrapper').scrollTop > 0) {
+    $('.swatchWrapper').classList.add('overflow-y-scroll');
   }
 }
 
@@ -62,14 +56,9 @@ const selectSwatch = (e) => {
   selected = e.target;
 }
 
-const setFullYear = () => {
-  const thisYear = document.querySelector('.this-year');
-  thisYear.innerHTML = (new Date()).getFullYear();
-}
-
-button.addEventListener('click', () => newColour());
+$('.btn').addEventListener('click', () => newColour());
 
 document.addEventListener('DOMContentLoaded', (e) => {
+  $('.this-year').textContent = new Date().getFullYear();
   newColour();
-  setFullYear();
 });
